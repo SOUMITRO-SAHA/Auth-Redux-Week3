@@ -1,11 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { authActions } from "../store/store";
 
 const Login = () => {
-	const { isAuthenticated, token } = useSelector((state) => state);
 	const dispatch = useDispatch();
 	const [userName, setUserName] = useState("");
 	const [password, setPassword] = useState("");
